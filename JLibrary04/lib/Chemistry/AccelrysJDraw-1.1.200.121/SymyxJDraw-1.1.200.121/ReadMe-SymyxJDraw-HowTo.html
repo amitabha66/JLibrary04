@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN" "http://www.w3.org/MarkUp/Wilbur/HTML32.dtd">
+<html>
+  <head>
+    <title>About the Accelrys JDraw Files</title>
+  </head>
+
+  <body link="#3366CC" vlink="#9999CC" text="#000000" alink="#0000CC" bgcolor="#FFFFFF">
+   <blockquote>
+<p>
+<a name="wp428145"> </a><div><font color="#003366" face="Arial, Verdana, Helvetica, sans-serif" size="5"><b>
+<h2>Accelrys JDraw 1.1 Files - How To Run the Examples</h2>
+</b></font></div>
+<p>
+<a name="wp428410"> </a><div><font color="#000000" face="Times New Roman, Georgia, Times, serif" size="3">
+This directory contains the <code>.jar</code> files that a developer can include in an applet or application. <em>(Note: Accelrys JDraw Applet was formerly known as Symyx JDraw Applet.)</em>
+<p>
+The <b><code>api</code></b> directory contains javadoc for the API Reference:
+<a href="api/index.html" target="_blank">api/index.html</a>
+<p>
+<p>
+<hr>
+<p><b>HTML examples (Applets):</b>
+<ul><li>
+<a href="examples/html/JDrawEditorExample.html" target="_blank">Editor example</a> - for comments explaining applet parameters, see the HTML source of this example</li>
+<li><a href="examples/html/JDrawRendererSimpleExample.html" target="_blank">Simple Renderer example</a></li>
+<li><a href="examples/html/JDrawRendererGridExample.html" target="_blank">Grid of Renderers example</a></li>
+</ul>
+<p>Note: In the HTML <code>archive</code> attribute, the value of the path to the <code>.jar</code> files must match the directory structure. For example,
+<pre><p>      &lt applet [ ... ] archive  =  "../../jdrawapplet.jar,../../jdrawcore.jar,../../CsInline.jar"&gt </pre>
+<p>For a quick view without editing this attribute, copy the example HTML files into the same directory as the .jar files.
+
+<p> Note that the structure can be a chimeString or a molString. The <code>molString</code> parameter is for a molfile (or rxnfile). On the HTML page,
+
+<ul>
+<li>Special symbols such as <code>\n</code> must be escaped (molfiles often have blank lines at the beginning)</li>
+<li>Leading and trailing spaces are trimmed, so we insert a leading non-space symbol, in this case, the exclamation point <code>!</code> before the line feed <code>&#10;</code></li>
+<li>These issue do not apply to using the <code>chimeString</code> parameter with a ChimeString.</li>
+</ul>
+
+
+<hr>
+<p><b>Java application Renderer example: <code>JDrawRendererExample</code></b>
+<p>
+<ol>
+<li>Verify that the follow JAR files are in this directory:
+     <code>CsInline.jar</code>, <code>jdrawapplet.jar</code>, <code>jdrawcore.jar</code>
+    <p>The easiest way to make the examples work is to copy all the <code>.jar</code>, <code>.java</code>, and <code>.html</code> files into one directory.</li>
+<li>To compile <code>JDrawRendererExample.java</code>, at command line console, type
+    <p><code>javac -classpath CsInline.jar;jdrawapplet.jar;jdrawcore.jar;. examples\java\JDrawRendererExample\src\JDrawRendererExample.java</code></li>
+<li>To run the example, type
+    <p><code>java -classpath CsInline.jar;jdrawapplet.jar;jdrawcore.jar;. examples\java\JDrawRendererExample\src\JDrawRendererExample</code></li>
+<li>In the JDrawRenderer example dialog, click the Open File button and navigate to a molfile to display.</li></ol>
+<p>
+<p><b>Java application Editor example: <code>JDrawEditorExample</code></b>
+<p>
+<ol>
+<li>Verify that the follow JAR files are in this directory:
+     <code>CsInline.jar</code>, <code>jdrawapplet.jar</code>, <code>jdrawcore.jar</code>
+    <p>The easiest way to make the examples work is to copy all the <code>.jar</code>, <code>.java</code>, and <code>.html</code> files into one directory.</li>
+<li>To compile <code>JDrawEditorExample.java</code>, at command line console, type
+    <p><code>javac -classpath CsInline.jar;jdrawapplet.jar;jdrawcore.jar;. JDrawEditorExample.java</code></li>
+<li>To run the example, type
+    <p><code>java -classpath CsInline.jar;jdrawapplet.jar;jdrawcore.jar;. JDrawEditorExample</code></li>
+</ol>
+<p>
+<b>Note</b>: The HTML and Java examples in the examples subdirectory demonstrate various capabilities and features of the Accelrys JDraw
+editor or renderer(s) inside applets or applications.
+These examples are provided as unsupported sample code,
+for demonstration purposes only, and are not guaranteed to function
+as working, supported, applications in their own right in your
+production environment.
+</font></div>
+<p>
+</font></div>
+    </blockquote>
+<hr align="left" />
+
+<P></P>
+<table align="left" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left"><font size="1" face="verdana, arial, helvetica, sans-serif">
+        &copy; Copyright 2010
+        Accelrys Software Inc. ("Accelrys"). All rights reserved.
+    </font></td>
+  </tr>
+  <tr>
+    <td align="left" ><font size="1" face="verdana, arial, helvetica, sans-serif">
+        <a href="http://www.accelrys.com" target="new">http://www.accelrys.com</a>&nbsp;&nbsp;
+    </font></td>
+  </tr>
+</table>
+  </body>
+</html>
+

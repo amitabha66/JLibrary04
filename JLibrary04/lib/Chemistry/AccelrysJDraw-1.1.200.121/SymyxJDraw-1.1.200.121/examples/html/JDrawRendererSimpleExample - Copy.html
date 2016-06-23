@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>JDrawRendererSimpleExample.html</title>
+</head>
+
+<body>
+<table border="1">
+    <tr>
+        <td>
+            <applet onload="fnStartInit(this)" name="testapp" code     = "com.symyx.draw.JDrawRenderer" width = "500" height = "500" archive  = "jdrawapplet.jar,jdrawcore.jar,CsInline.jar">
+                <param name="java_arguments" value="-Xmx256m -Dsun.java2d.noddraw=true">
+                <!--
+                The <code>molString</code> parameter is for a molfile.
+                <p>On the HTML page
+                1. Special symbols such as <code>\n</code> must be escaped (molfiles often have blank lines at the beginning)
+                2. Leading and trailing spaces are trimmed, so we insert a leading non-space symbol, in this case, the exclamation point <code>!</code> before the line feed <code>&#10;</code>
+                <p>These issue do not apply to using the <code>chimeString</code> parameter with a ChimeString.
+                -->
+                <param name="chimeString"
+                value=
+                "CYAAFQwAAdwQ0KLEnN1oUgNFDD3HS6hVRk$WpnVBTW6YZuKQ3zYgF$bx1M2JwN42sadLwWQASJzASRtYo$tyiNp3mwHQopj^WMxC8v011BMm8mf1rieq0ISRoxXTEA2WcBgJpoEfI6M8AUP6TQJHKcSduPGG8jhT3Q4WYSIuQ1uPoJ1aSWNqZLEewd6rq3IQG0xhmkoKtMOlxuMFuJFLBKC0uxoktRMqF2BljxGR03WrsnSxqlxouNTDlJ21SaJmKYj2pgxhi95^3YU0NGucWor7fhfokWydsiLr1MX5YOYBZUJyJzdXz160xepCbkyD30e37acm6S8aO^Yb3yrWVbFeX71U7s$uGENmNlQVSujF1Sx62NMrm$5Cvsad9lhTNfT8EooZYz8H4Y9RxVe9QUYJC8OyeI6zLNrSfav02pYuarDhKeelSGy6DdtOKYest3BUnbFotCiRc17c8496RV9NtqeXSl6$yq75meO3g4eaM7KY176OtRtOto8W37Sdd2sBv6O17bZdwBvA^RLPsM1tcB"
+                />
+                <!--param name="hydrogenDisplayMode" value="0">
+                <param name="colorAtomsByType" value="on">
+                <param name="displayChiralStereoLabels" value="5"-->
+            </applet>
+        </td>
+    </tr>
+</table>
+
+<button onclick= 'javascript:testapp.copy()'>Test</button>
+
+<script>
+function fnStartInit(applet) {
+    testapp.preferences().setAndStereoLabelText("")
+}
+</script>
+
+</body>
+</html>
+
